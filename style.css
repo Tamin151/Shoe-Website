@@ -1,0 +1,194 @@
+
+@font-face {
+    font-family: 'rocgroteskwide';
+    src: url('rocgroteskwide-extrabold.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'rocgroteskwide', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #1B212C;
+    padding: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.logo img {
+    height: 60px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s, text-decoration 0.5s;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    color: #fb4b29;
+    text-decoration: underline;
+}
+
+.btn .login, .main-container .left .shop-now {
+    background-color: #fb4b29;
+    border: 1px solid #fb4b29;
+    padding: 12px 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+.btn .login:hover, .main-container .left .shop-now:hover {
+    background-color: #e42222;
+    border-color: #e42222;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main-container .left, .main-container .right {
+    flex: 1; 
+}
+
+.main-container .left h1 {
+    color: #FFD6AE;
+    font-size: 5vw; 
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.main-container .left p {
+    font-family: 'Poppins', sans-serif;
+    color: #DBDBDB;
+    font-weight: 300;
+    font-size: 1rem; 
+    margin: 10px 0 30px;
+}
+
+.main-container .left .btn .category {
+    background: none;
+    padding: 12px 30px;
+    margin-left: 10px;
+    color: #FFD6AE;
+    border: 1px solid #FFD6AE;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.main-container .left .btn .category:hover {
+    background-color: #FFD6AE;
+    color: #fb4b29;
+}
+
+.main-container .right .main {
+    position: relative;
+    top: -10%;
+    background: url(images/bg-effact.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1100px) {
+    body {
+        padding: 10px 20px; 
+    }
+
+    .navbar ul {
+        font-size: 0.9rem; 
+    }
+
+    .main-container .left h1 {
+        font-size: 6vw; 
+    }
+
+    .main-container .left p {
+        font-size: 0.9rem; 
+    }
+
+    .main-container .right .main {
+        right: -50px; 
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar ul {
+        display: none; 
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-container .left {
+        text-align: center;
+    }
+
+    .main-container .right .main, .main-container .right .bg {
+        width: 100%; 
+        position: relative;
+        top: 0;
+    }
+
+    .main-container .left h1 {
+        font-size: 7vw;/
+    }
+}
+
+.main-container .right .main {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+@media (max-width: 1100px) {
+    .main-container .right .main {
+        right: 0; 
+        top: 0; 
+    }
+
+ 
+}
+
+@media (max-width: 800px) {
+    .main-container .right .main {
+        width: 100%; 
+        height: auto;
+        position: relative;
+        top: 0; 
+    }
+}
